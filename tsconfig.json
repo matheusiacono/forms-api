@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "@tsconfig/strictest/tsconfig.json",
+    "@tsconfig/node18/tsconfig.json"
+  ],
+  "include": ["src/"],
+  "compilerOptions": {
+    "target": "ES2022",
+    "verbatimModuleSyntax": false,
+
+    "outDir": "./dist",
+
+    "noUnusedParameters": false
+  }
+}
