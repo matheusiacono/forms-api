@@ -1,6 +1,7 @@
 import { FormTypes } from "../form-fields-rules";
 
 const nameForm = {
+  formType: FormTypes.NAME_FORM,
   fullName: {
     type: "text",
     required: true,
@@ -8,6 +9,7 @@ const nameForm = {
 };
 
 const contactForm = {
+  formType: FormTypes.CONTACT_FORM,
   fullName: {
     type: "text",
     required: true,

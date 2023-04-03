@@ -12,9 +12,9 @@ formsRouter.get("/:formType", (req, res) => {
 
   if (result.Err) {
     res.status(400).json({ errors: result.Err });
+  } else {
+    res.status(200).json({ data: result.Ok });
   }
-
-  res.status(200).json({ data: result.Ok });
 });
 
 formsRouter.post("/", (req, res) => {
@@ -24,9 +24,9 @@ formsRouter.post("/", (req, res) => {
     .then((result) => {
       if (result.Err) {
         res.status(400).json({ errors: result.Err });
+      } else {
+        res.status(200).json({ data: result.Ok });
       }
-
-      res.status(200).json({ data: result.Ok });
     })
     .catch((err) => {
       console.error(err);

@@ -1,4 +1,3 @@
-import { FormFieldsEntity } from "../entities/form-fields-entity";
 import { saveFormFields } from "../repositories/form-fields-repository";
 import { getSchemas } from "../schemas";
 
@@ -15,8 +14,6 @@ export const createFormEntry = async (formData: Record<string, unknown>) => {
     return { Err: result.error.format() };
   }
 
-  const newForm = new FormFieldsEntity(result.data);
-
-  await saveFormFields(newForm);
+  const newForm = await saveFormFields(result.data);
   return { Ok: newForm };
 };

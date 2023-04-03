@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan("tiny"));
 
-app.use("forms", formsRouter);
+app.use("/forms", formsRouter);
 
 app.use((_, res) => {
   res.status(404).send("Not Found!");

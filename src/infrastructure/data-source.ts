@@ -1,14 +1,14 @@
 import { DataSource } from "typeorm";
 import { FormFieldsEntity } from "../forms/entities/form-fields-entity";
+import { dbHost, dbName, dbPassword, dbUser } from "./env-vars";
 
 export const AppDataSource = new DataSource({
   type: "postgres",
-  host: "localhost",
+  host: dbHost,
   port: 5432,
-  username: "root",
-  password: "admin",
-  database: "forms-api",
+  username: dbUser,
+  password: dbPassword,
+  database: dbName,
   entities: [FormFieldsEntity],
-  synchronize: false,
-  logging: false,
+  migrations: ["./migrations/**"],
 });
