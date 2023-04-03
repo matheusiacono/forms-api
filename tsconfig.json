@@ -7,9 +7,12 @@
   "compilerOptions": {
     "target": "ES2022",
     "verbatimModuleSyntax": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
 
     "outDir": "./dist",
 
-    "noUnusedParameters": false
+    "noUnusedParameters": false,
+    "strictPropertyInitialization": false
   }
 }
